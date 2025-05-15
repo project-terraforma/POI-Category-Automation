@@ -20,10 +20,10 @@ def build_category_tree(path_to_txt):
     return tree
 
 # 1. Build the tree
-tree = build_category_tree("Data/categories.txt")
+tree = build_category_tree("../Data/categories.txt")
 
 # 2. Write full tree to JSON
-with open("category_tree.json", "w", encoding="utf-8") as out:
+with open("../Data/category_tree.json", "w", encoding="utf-8") as out:
     json.dump(tree, out, indent=2, ensure_ascii=False)
 
 print(f"Wrote category_tree.json with {len(tree)} top-level entries.")
