@@ -29,3 +29,14 @@ It is extensible since the category tree lives in JSON and can be updated by edi
    ```bash
    git clone https://github.com/your-org/poi-categorization.git
    cd poi-categorization
+ 2. Install dependencies
+pip install -r requirements.txt
+
+ 3. Explore the category tree
+python category-tree.py --print-tree
+
+ 4. Run a quick scrape
+python POI-Categorization-webscraping.py --input urls.txt --output pois.csv
+
+ 5. Open the notebooks
+jupyter lab
