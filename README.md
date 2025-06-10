@@ -1,51 +1,50 @@
-POI Categorization Repository PROJECT B
+## POI Categorization Automation
 
-A repo for organizing and categorizing Points of Interest (POIs) using an LLM base, web-scraping, and a couple more magic spells
+A repository for organizing and categorizing Points of Interest (POIs) using an LLM base, Web-Scraping, Social-Scraping and Rule Based Approach
 
 ## What’s Inside
 
 1. Scripts
    * POI-Categorization-webscraping.py – crawls and extracts POI details from business websites
-   * POI-Categorization-socialscraping.py – gathers POI metadata from social platforms and review sites
-   * category-tree.py – utilities to parse, traverse and manipulate the POI category hierarchy
+   * POI-Categorization-socialscraping.py – gathers POI metadata from social platforms
+   * category-tree.py – utilities to parse, and traverse the POI category hierarchy
 
 2. Notebooks
-   * POI-Categorization(original).ipynb – first-pass exploration and baseline experiments
+   * POI-Categorization(original).ipynb – first-pass exploration and baseline experiments with original expensive approach
    * POI-Categorization(cheaper).ipynb – cost optimized pipeline tweaks and performance comparisons
-   * POI_Alt-Category-Automation.ipynb – automated routines for bulk category assignments and rule based tagging
+   * POI_Alt-Category-Automation.ipynb – Application to predict alternative categories using LLM call
 
 3. Data
-   * category_tree.json – JSON file defining the full category taxonomy for POIs
-
-## Why This Toolkit
-
-This repository is modular so you can mix and match scraping methods with your own data flows  
-It is scalable with notebooks demonstrating both proofs of concept and production ready strategies  
-It is extensible since the category tree lives in JSON and can be updated by editing a single file  
+   * category_tree.json – JSON file defining the full category taxonomy for POIs 
 
 # Getting Started
 
 1. Clone the repo  
-   ```bash
-   git clone https://github.com/project-terraforma/POI-Category-Automation
-   cd poi-categorization
-   ```
- 2. Install dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
+  ```bash
+  git clone https://github.com/project-terraforma/POI-Category-Automation
+  cd POI-Category-Automation
+  ```
+2. Install dependencies
+  ```bash
+  open POI-Categorization(original).ipynb
+  Run 1st cell
+  ```
 
- 3. Explore the category tree
-   ```bash
-   python category-tree.py --print-tree
-   ```
+3. Explore web-scraping
+  ```bash
+  cd Helper-functions
+  python POI-Categorization-webscraping.py
+  ```
 
- 4. Run a quick scrape
-   ```bash
-   python POI-Categorization-webscraping.py --input urls.txt --output pois.csv
-   ```
+4. Explore social-scraping
+  ```bash
+  cd Helper-functions
+  python POI-Categorization-socialscraping.py
+  ```
 
- 5. Open the notebooks
-   ```bash
-   jupyter lab
-   ```
+5. Run POI Categorization (Original)
+  ```bash
+  Open POI-Categorization(original).ipynb
+  Replace: API key = <Your API key>
+  Run All
+  ```
