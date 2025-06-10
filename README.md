@@ -29,18 +29,23 @@ It is extensible since the category tree lives in JSON and can be updated by edi
    ```bash
    git clone https://github.com/project-terraforma/POI-Category-Automation
    cd poi-categorization
+   ```
  2. Install dependencies
    ```bash
    pip install -r requirements.txt
+   ```
 
  3. Explore the category tree
    ```bash
    python category-tree.py --print-tree
+   ```
 
  4. Run a quick scrape
    ```bash
    python POI-Categorization-webscraping.py --input urls.txt --output pois.csv
+   ```
 
  5. Open the notebooks
    ```bash
    jupyter lab
+   ```
